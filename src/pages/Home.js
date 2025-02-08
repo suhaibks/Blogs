@@ -25,6 +25,10 @@ const Home = () => {
     setSearchQuery(e.target.value);
   };
 
+  const clearSearch = () => {
+    setSearchQuery('');
+  };
+
   return (
     <div className="page-container home-page">
       <section className="search-section">
@@ -42,6 +46,15 @@ const Home = () => {
             value={searchQuery}
             onChange={handleSearch}
           />
+          {searchQuery && (
+            <svg 
+              className="clear-icon"
+              onClick={clearSearch}
+              viewBox="0 0 24 24"
+            >
+              <path d="M18.3 5.71L12 12l6.3 6.29-1.41 1.41L10.59 13.41 4.29 19.7 2.88 18.29l6.3-6.29-6.3-6.29L4.29 3.29 10.59 9.59l6.29-6.3z"/>
+            </svg>
+          )}
         </div>
       </section>
 
