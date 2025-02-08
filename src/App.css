@@ -216,6 +216,25 @@ body {
   z-index: 2;
 }
 
+.clear-icon {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 20px;
+  width: 20px;
+  fill: #666;
+  cursor: pointer;
+  z-index: 2;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.clear-icon:hover {
+  fill: #333;
+  opacity: 0.8;
+}
+
+
 .search-input {
   width: 100%;
   padding: 1rem 1rem 1rem 3rem;
